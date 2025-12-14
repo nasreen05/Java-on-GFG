@@ -1,11 +1,13 @@
 class Solution {
-    public static int nFactorial(int n) {
-        int ans = 1;
+    public int factorial(int n) {
+
+        int fact = 1;   // separate variable
 
         for (int i = 1; i <= n; i++) {
-            ans *= i;  // multiply all numbers from 1 to n
+            fact = fact * i;
         }
 
-        return ans;
+        return fact;
     }
 }
+ 
