@@ -1,0 +1,11 @@
+class Solution {
+    public int computeGCD(int a, int b) {
+
+        while (b != 0) {
+            int rem = a % b;
+            a = b;
+            b = rem;
+        }
+        return a;
+    }
+}
