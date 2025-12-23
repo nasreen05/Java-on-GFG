@@ -1,16 +1,15 @@
-import java.util.*;
+class Solution {
+    public static void squareWall(int s) {
 
-public class Solution {
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        // Create one row using StringBuilder
+        StringBuilder row = new StringBuilder();
+        for (int i = 0; i < s; i++) {
+            row.append("* ");
+        }
 
-        // Create one row using string multiplication
-        String row = "* ".repeat(n).trim();
-
-        // Print square wall using single loop
-        for (int i = 0; i < n; i++) {
-            System.out.println(row);
+        // Print the row 's' times using single loop
+        for (int i = 0; i < s; i++) {
+            System.out.println(row.toString());
         }
     }
 }
