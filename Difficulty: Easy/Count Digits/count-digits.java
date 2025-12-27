@@ -1,17 +1,18 @@
-import java.util.*;
-
-public class Solution {
-    public static void main(String args[]) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-
+class Solution {
+    static int evenlyDivides(int n) {
         int count = 0;
-
+        int original = n;
+        
         while (n > 0) {
-            count++;
+            int digit = n % 10;
+            
+            if (digit != 0 && original % digit == 0) {
+                count++;
+            }
+            
             n = n / 10;
         }
-
-        System.out.print(count);
+        
+        return count;
     }
 }
